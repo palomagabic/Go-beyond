@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<header class="text-info p-4">
+  <h1>Scrapbooks</h1>
+</header>
+<main class="container">
+  <% @scrapbooks.each do |scrapbook| %>
+
+      <%= scrapbook.name %>
+      <%= scrapbook.image1 %>
+
+      <%= link_to 'Show', scrapbook %>
+      <%= link_to 'Edit', edit_scrapbook_path(scrapbook) %>
+      <%= link_to 'Destroy', scrapbook, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+  <% end %>
+
+  <br>
+
+  <%= link_to 'New Scrapbook', new_scrapbook_path %>
+
+</main>
