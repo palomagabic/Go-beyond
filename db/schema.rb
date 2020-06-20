@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_06_12_090602) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "scrapbooks", force: :cascade do |t|
     t.string "name"
     t.string "image1_file_name"

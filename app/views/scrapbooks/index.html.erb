@@ -1,22 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<header class="text-info p-4">
+<header class="text-primary p-4">
   <h1>Scrapbooks</h1>
 </header>
 <main class="container">
-  <% @scrapbooks.each do |scrapbook| %>
 
-      <%= scrapbook.name %>
-      <%= scrapbook.image1 %>
+  <% if user_signed_in? %>
+    <% @scrapbooks.each do |scrapbook| %>
 
-      <%= link_to 'Show', scrapbook %>
-      <%= link_to 'Edit', edit_scrapbook_path(scrapbook) %>
-      <%= link_to 'Destroy', scrapbook, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= scrapbook.name %>
+        <%= scrapbook.image1 %>
 
+        <%= link_to 'Show', scrapbook %>
+        <%= link_to 'Edit', edit_scrapbook_path(scrapbook) %>
+        <%= link_to 'Destroy', scrapbook, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+    <% end %>
+
+    <br>
+
+    <%= link_to 'New Scrapbook', new_scrapbook_path %>
+  <% else %>
+  <div class="p-5">
+    <div class="card text-white bg-secondary mb-3">
+      <div class="card-body">
+        <p class="card-text"> Guarda tus recuerdos de forma organizada gracias a nuestros scrapbooks, para que asi no lo pierdas y puedas acceder a ellos en cualquier lugar. </p>
+      </div>
+    </div>
+  </div>
   <% end %>
-
-  <br>
-
-  <%= link_to 'New Scrapbook', new_scrapbook_path %>
 
 </main>
