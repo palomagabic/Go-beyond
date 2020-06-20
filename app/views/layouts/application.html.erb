@@ -37,7 +37,7 @@
             <a class="nav-link" href=""><i class="fas fa-sd-card"></i>Guarda tus recuerdos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href=""><i class="fas fa-book"></i>Blog</a>
+            <a class="nav-link" href="<%=blogs_path%>"><i class="fas fa-book"></i>Blog</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
@@ -63,6 +63,36 @@
     <p class="alert"><%= alert %></p>
 
     <div class="m-4">
+      <div class="card text-white bg-dark mb-3">
+        <div class="card-header"> Cotiza tu viaje! </div>
+        <div class="card-body">
+          <h5 class="card-title">Cuentanos sobre tu viaje</h5>
+          <form>
+            <div class="form-row">
+              <div class="col-md-4">
+                <p>Origen</p>
+                <select class="form-control">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <i class="fas fa-arrow-right fa-2x"></i>
+              <div class="col-md-4">
+                <p>Destino</p>
+                <select class="form-control">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+          </form>
+          <button type="button" class="btn btn-light float-right m-4">¡Vamos Juntos!</button>
+        </div>
+      </div>
       <%= yield %>
     </div>
 
