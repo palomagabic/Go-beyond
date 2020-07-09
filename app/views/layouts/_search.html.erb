@@ -1,0 +1,98 @@
+<div class="m-5">
+  <div class="card text-white bg-dark mb-3 p-3">
+    <div class="card-body">
+      <h5 class="card-title"> Cotiza tu viaje! </h5>
+      <form>
+        <div class="form-row p-1">
+          <div class="col-md-4">
+            <p>Origen</p>
+            <select class="form-control">
+              <option selected>Elegir...</option>
+              <option value="1">San Juan de Puerto Rico</option>
+              <option value="2">San José de Costa Rica</option>
+              <option value="3">Panamá</option>
+              <option value="4">Montevideo</option>
+              <option value="5">Sao Paulo</option>
+              <option value="6">Santiago de Chile</option>
+              <option value="7">Buenos Aires</option>
+              <option value="8">Bogotá</option>
+              <option value="9">Medellín</option>
+              <option value="10">Cali</option>
+            </select>
+          </div>
+          <i class="fas fa-arrow-right fa-2x"></i>
+          <div class="col-md-4">
+            <p>Destino</p>
+            <select class="form-control">
+              <option selected>Elegir...</option>
+              <option value="1">Singapur</option>
+              <option value="2">París</option>
+              <option value="3">Hong Kong</option>
+              <option value="4">Zurich</option>
+              <option value="5">Ginebra</option>
+              <option value="6">Osaka</option>
+              <option value="7">Seúl</option>
+              <option value="8">Copenhague</option>
+              <option value="9">Nueva York</option>
+              <option value="10">Tel Aviv</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row p-1">
+          <div class="form-group col-md-2">
+            <label for="">Ida</label>
+            <input type="date" class="form-control">
+          </div>
+          <i class="fas fa-arrow-right fa-2x"></i>
+          <div class="form-group col-md-2">
+            <label for="">Vuelta</label>
+            <input type="date" class="form-control">
+          </div>
+          <div class="col-md-1 m-2">
+            <p>Pasajeros</p>
+            <select class="custom-select my-1 mr-sm-2">
+              <option selected>Elegir...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="col-md-2 m-2">
+            <p>Habitaciones</p>
+            <select class="custom-select my-1 mr-sm-2">
+              <option selected>Elegir...</option>
+              <option value="1">1 Habitacion</option>
+              <option value="2">2 Habitaciones</option>
+              <option value="3">3 Habitaciones</option>
+            </select>
+          </div>
+        </div>
+      </form>
+      <button type="button" class="btn btn-light btn-lg float-right m-3" data-toggle="modal" data-target="#covid">¡Vamos Juntos!</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="covid" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">¡Lamentamos la situacion!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p> Debido a la crisis sanitaria actual nuestros patrocinadores y el turismo en general se encuentran detenidos, esperamos brindarte nuestros servicios cuando pase la situacion.</p>
+            <p>Volveremos a viajar juntos por el mundo</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

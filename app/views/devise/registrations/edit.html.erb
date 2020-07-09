@@ -1,8 +1,28 @@
-<div class="px-5">
+<div class="px-5 pb-5">
   <h2>Editar <%= resource_name.to_s.humanize %></h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.label :nombres %><br />
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :apellidos %><br />
+      <%= f.text_field :lastname %>
+    </div>
+
+    <div class="field">
+      <%= f.label :cumpleaños %><br />
+      <%= f.date_field :birthday %>
+    </div>
+
+    <div class="field">
+      <%= f.label :pais %><br />
+      <%= f.select :country, ['Chile', 'Argentina', 'Peru'] %>
+    </div>
 
     <div class="field">
       <%= f.label :email %><br />
@@ -14,7 +34,7 @@
     <% end %>
 
     <div class="field">
-      <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+      <%= f.label :contraseña %> <i>(leave blank if you don't want to change it)</i><br />
       <%= f.password_field :password, autocomplete: "new-password" %>
       <% if @minimum_password_length %>
         <br />
@@ -23,17 +43,17 @@
     </div>
 
     <div class="field">
-      <%= f.label :password_confirmation %><br />
+      <%= f.label :confirmacion_de_contraseña %><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     </div>
 
     <div class="field">
-      <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+      <%= f.label :antigua_contraseña %> <i>(we need your current password to confirm your changes)</i><br />
       <%= f.password_field :current_password, autocomplete: "current-password" %>
     </div>
 
     <div class="actions">
-      <%= f.submit "Update" %>
+      <%= f.submit "Cambiar" %>
     </div>
   <% end %>
 
