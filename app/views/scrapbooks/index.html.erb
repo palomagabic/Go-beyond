@@ -9,7 +9,7 @@
     <% @scrapbooks.each do |scrapbook| %>
 
         <%= scrapbook.name %>
-        <%= image_tag(@scrapbook.image1.url) %>
+        <%= image_tag scrapbook.image.url %>
 
         <%= link_to 'Show', scrapbook %>
         <%= link_to 'Edit', edit_scrapbook_path(scrapbook) %>

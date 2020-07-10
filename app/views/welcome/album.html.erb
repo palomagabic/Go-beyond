@@ -3,6 +3,47 @@
 </header>
 <main class="container">
   <% if user_signed_in? %>
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-6">
+              <form>
+                  <p>
+                      <input class="btn btn-info" id="subirimagen" name="subirimagen" type="file"/>
+                      <input class="btn btn-primary" onclick="editor.cargarImagen();" type="button" value="subir"/>
+                  </p>
+              </form>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-2">
+              <div class="btn-group-vertical">
+                  <button class="btn btn-primary" onclick="editor.filtros.gris();" type="button">
+                      Gris
+                  </button>
+                  <button class="btn btn-primary" onclick="editor.filtros.negativo();" type="button">
+                      Negativo
+                  </button>
+                  <button class="btn btn-primary" onclick="editor.filtros.contraste();" type="button">
+                      Contraste
+                  </button>
+                  <button class="btn btn-primary" onclick="editor.filtros.transparencia();" type="button">
+                      Transparencia
+                  </button>
+                  <button class="btn btn-primary" onclick="editor.filtros.blancoNegro();" type="button">
+                      Blanco/Negro
+                  </button>
+                  <button class="btn btn-primary" onclick="editor.filtros.sepia();" type="button">
+                      sepia
+                  </button>
+              </div>
+          </div>
+          <div class="col-md-10">
+              <div id="main">
+                  <canvas height="300" id="canvas" width="450"></canvas>
+              </div>
+          </div>
+      </div>
+  </div>
   <% else %>
     <div class="p-5">
       <div class="card text-white bg-secondary mb-3">

@@ -24,7 +24,7 @@ class ScrapbooksController < ApplicationController
   # POST /scrapbooks
   # POST /scrapbooks.json
   def create
-    @scrapbook = Scrapbook.new(scrapbook_params)
+    @scrapbook = Scrapbook.new
 
     respond_to do |format|
       if @scrapbook.save
