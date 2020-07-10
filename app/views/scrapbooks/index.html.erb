@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <header class="text-primary p-4">
-  <h1>Scrapbooks</h1>
+  <h1>Albumes</h1>
 </header>
 <main class="container">
 
@@ -9,7 +9,7 @@
     <% @scrapbooks.each do |scrapbook| %>
 
         <%= scrapbook.name %>
-        <%= scrapbook.image1 %>
+        <%= image_tag(@scrapbook.image1.url) %>
 
         <%= link_to 'Show', scrapbook %>
         <%= link_to 'Edit', edit_scrapbook_path(scrapbook) %>
@@ -19,12 +19,12 @@
 
     <br>
 
-    <%= link_to 'New Scrapbook', new_scrapbook_path %>
+    <%= link_to 'Nuevo Album', new_scrapbook_path %>
   <% else %>
   <div class="p-5">
     <div class="card text-white bg-secondary mb-3">
       <div class="card-body">
-        <p class="card-text"> Guarda tus recuerdos de forma organizada gracias a nuestros scrapbooks, para que asi no lo pierdas y puedas acceder a ellos en cualquier lugar. </p>
+        <p class="card-text"> Guarda tus recuerdos de forma organizada gracias a nuestros albumes, para que asi no lo pierdas y puedas acceder a ellos en cualquier lugar. </p>
       </div>
     </div>
   </div>

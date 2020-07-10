@@ -1,0 +1,16 @@
+<header class="text-primary p-4">
+  <h1>Scrapbooks</h1>
+</header>
+<main class="container">
+  <% if user_signed_in? %>
+  <% else %>
+    <div class="p-5">
+      <div class="card text-white bg-secondary mb-3">
+        <div class="card-body">
+          <p class="card-text"> Edita tus fotos y personaliza tus recuerdos sin limite gracias a nuestros scrapbooks. </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+</main>

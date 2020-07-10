@@ -1,35 +1,40 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row">
-  <div class="col-sm-4 col-md-3 sidebar">
-    <div class="mini-submenu">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </div>
-    <div class="list-group">
-    <% @blogs.each do |blog| %>
-      <a href="#" class="list-group-item list-group-item-action"><%= blog.title %></a>
-    <% end %>
-  </div>
-</div>
+<header class="text-primary p-4">
+  <h1>Blogs</h1>
+</header>
 
-  <header class="text-primary p-4">
-    <h1>Blogs</h1>
-  </header>
-
+<main class="container">
+  <div class="row">
+    <div class="col-sm-4 col-md-3 sidebar">
+      <div class="mini-submenu">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+      <div class="list-group">
       <% @blogs.each do |blog| %>
-          <%= blog.title %>
-          <%= blog.ubication %>
-          <%= image_tag @blog.image.url(:medium) %>
-          <%= blog.content %>
-          <%= blog.create %>
-          <%= link_to 'Show', blog %>
-          <%= link_to 'Edit', edit_blog_path(blog) %>
-          <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <a href="#" class="list-group-item list-group-item-action"><%= blog.title %></a>
       <% end %>
-  <br>
+    </div>
+  </div>
 
-  <%= link_to 'New Blog', new_blog_path %>
+        <% @blogs.each do |blog| %>
+            <%= blog.title %>
+            <%= blog.ubication %>
+            <%= image_tag @blog.image.url(:medium) %>
+            <%= blog.content %>
+            <%= blog.create %>
+            <%= link_to 'Show', blog %>
+            <%= link_to 'Edit', edit_blog_path(blog) %>
+            <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+    <br>
 
-</div>
+    <% if user_signed_in? %>
+      <%= link_to 'New Blog', new_blog_path %>
+    <% end %>
+
+  </div>
+
+</main>
